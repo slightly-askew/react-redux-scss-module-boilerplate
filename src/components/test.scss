@@ -1,0 +1,23 @@
+
+@import '../style/var';
+
+.element {
+  background-color: $blueish;
+  color: $whitish;
+  font-size: 16px;
+  padding: 20px;
+  transition: background-color 1s ease-in-out;
+
+  &:hover {
+    background-color: $yellowish;
+  }
+
+}
+
+.meh {
+  background-color: $yellowish;
+  border-radius: 15%;
+  height: 25%;
+  width: 50%;
+
+}

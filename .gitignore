@@ -1,6 +1,9 @@
 
 # Compiled source #
 ###################
+dist/
+build/
+bundle.js
 *.com
 *.class
 *.dll
