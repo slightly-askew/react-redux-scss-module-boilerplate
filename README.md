@@ -7,11 +7,9 @@ yarn install
 
 yarn start
 
-<<<<<<< HEAD
 http://localhost:7770/
 
-=======
->>>>>>> refs/remotes/origin/master
+
 The production version (including webpack.config.prod.js file) is far from finished. I will update that at some point. Use this if you want a dev environment out of the boxt to have a play with.
 
 Test files included but very basic. Again, I'll update this into something a little more enlightening when I get there myself..
