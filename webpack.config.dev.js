@@ -25,7 +25,7 @@ module.exports = {
     loaders: [
       //SCSS GLOBAL
       {
-				test: /\.scss$/,
+        test: /\.scss$/,
         include: path.resolve(__dirname, './src'),
         exclude: [/node_modules/,/src\/components/,/src\/style/],
         use: extractSCSS.extract({
@@ -39,7 +39,7 @@ module.exports = {
 			},
       //SCSS MODS
       {
-				test: /\.scss$/,
+        test: /\.scss$/,
         include: path.resolve(__dirname, './src/components'),
         exclude: /node_modules/,
         loaders: [
