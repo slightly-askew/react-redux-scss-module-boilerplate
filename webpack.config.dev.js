@@ -3,6 +3,9 @@ let webpack = require('webpack');
 const path = require('path');
 const context = path.resolve(__dirname, 'src');
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractSCSS = new ExtractTextPlugin('styles.css');
+
 
 module.exports = {
   context,
@@ -20,11 +23,24 @@ module.exports = {
   },
   module: {
     loaders: [
-
-      //SCSS
+      //SCSS GLOBAL
       {
 				test: /\.scss$/,
         include: path.resolve(__dirname, './src'),
+        exclude: [/node_modules/,/src\/components/,/src\/style/],
+        use: extractSCSS.extract({
+          fallbackLoader: 'style-loader',
+            loader: [
+              'css-loader',
+              'postcss-loader',
+              'sass-loader',
+            ]
+          })
+			},
+      //SCSS MODS
+      {
+				test: /\.scss$/,
+        include: path.resolve(__dirname, './src/components'),
         exclude: /node_modules/,
         loaders: [
           'style-loader',
@@ -57,6 +73,7 @@ module.exports = {
     ]
   },
   plugins: [
+    extractSCSS,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],

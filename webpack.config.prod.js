@@ -1,7 +1,9 @@
 let webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const path = require('path');
 const context = path.resolve(__dirname, 'src');
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSCSS = new ExtractTextPlugin('styles.css');
 
 
