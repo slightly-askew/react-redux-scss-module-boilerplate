@@ -9,7 +9,7 @@ class Main extends Component {
     return (
       <div>
         <h1>
-          <Link to="/">Reduxstagram</Link>
+          <Link to="main">Click to visit Main - some styles live there</Link>
         </h1>
         {/* We use cloneElement here so we can auto pass down props */}
         {/* { React.cloneElement(this.props.children, this.props) } */}

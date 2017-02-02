@@ -38,7 +38,6 @@ render(
     { /* Tell the Router to use our enhanced history */ }
     <Router history={history}>
       <Route path="/" component={App} />
-        <IndexRoute component={Main} />
         <Route path="main" component={Test} />
         {/* add your paths in here; each component which is rendered within App at each url -- <Route path="/view/:postId" component={Single}></Route> */}
       {/*  Don't forget you can nest your routes like this:
