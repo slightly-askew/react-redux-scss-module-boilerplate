@@ -7,12 +7,12 @@ var app = express();
 var compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
+    noInfo: true,
+    publicPath: config.output.publicPath
 }));
 
 app.use(require('webpack-hot-middleware')(compiler, {
-  heartbeat: 2000
+    heartbeat: 2000
 }));
 
 app.get('*', function(req, res) {
@@ -20,10 +20,10 @@ app.get('*', function(req, res) {
 });
 
 app.listen(7770, 'localhost', function(err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
+    if (err) {
+        console.log(err);
+        return;
+    }
 
-  console.log('Listening at http://localhost:7770');
+    console.log('Listening at http://localhost:7770');
 });
